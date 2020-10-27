@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+<div class="col-lg-6">
+<div class="container" style="margin-top: 50px">
+
+  <%= form_with scope: nil, url: job_applications_path,:html => {:multipart => true} ,local: true do |form| %>
+    <div class="field form-group">
+      <p>
+        <%= form.label :username %><br>
+        <%= form.text_field :username ,class: "form-control"%>
+      </p>
+      <div class="help-block with-errors"></div>
+    </div>
+
+    <div class="field form-group">
+    <p>
+      <%= form.label :email %><br>
+      <%= form.email_field :email,class: "form-control" %>
+    </p>
+    </div>
+    <%= hidden_field_tag 'job_id',params.permit(:job_id).values  %>
+    <div class="field form-group">
+    <p>
+      <%= form.label :phonenumber %><br>
+      <%= form.text_field :phonenumber,class: "form-control" %>
+    </p>
+
+    <br>
+      <div class="form-group">
+        <p>
+          <%= form.label :resume %><br>
+          <%= form.file_field :resume %>
+        </p>
+      </div>
+        <br>
+
+
+    <div class="actions">
+      <%= form.submit "Apply", class: "form-control-submit-button disabled"%>
+    </div>
+      </div>
+  <% end %>
+
+
+
+</div> <!-- end of form-container -->
+</div>
+  </div> <!-- end of form-container -->
+</div>
+<% if flash[:notice] %>
+  <div class="notice" style="background-color: #20c997;margin-right:1000px;margin-left: 280px;"><%= flash[:notice] %></div>
+<% end %>
