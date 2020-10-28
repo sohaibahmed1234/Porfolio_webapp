@@ -1,4 +1,14 @@
 class Job < ApplicationRecord
+
+  validates :job_title, presence: true
+  validates :job_details, presence: true
+  validates :job_type, presence: true
+  validates :positions, presence: true
+  validates :education, presence: true
+  validates :experience, presence: true
+
+
+
   has_many :job_applications, dependent: :destroy
   has_many :job_technologies
   has_many :technologies,through: :job_technologies

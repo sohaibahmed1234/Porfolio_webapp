@@ -17,7 +17,7 @@ ActiveAdmin.register_page "Dashboard" do
       # line_chart   Content.pluck("download").uniq.map { |c| { title: c, data: Content.where(download: c).group_by_day(:updated_at, format: "%B %d, %Y").count }  }, discrete: true
       # column_chart Content.group_by_hour_of_day(:updated_at, format: "%l %P").order(:download).count, {library: {title:'Downloads for all providers'}}
       # column_chart Content.group(:title).order('download DESC').limit(5).sum(:download)
-      bar_chart Job.joins(:job_applications).select(:job_title).group(:job_title).count() ##
+      bar_chart Job.joins(:job_applications).group(:job_title).count() ##
       # line_chart result.each(:as => :hash) { |item|
       #   {name: item.title, data: item.sum_download.count}
       # }
@@ -34,7 +34,7 @@ ActiveAdmin.register_page "Dashboard" do
                (job.job_title)
                end
 
-              records = JobApplication.where("job_id = ?",job.id ).all
+              records = job.job_applications
               span do
                  records.size
               end

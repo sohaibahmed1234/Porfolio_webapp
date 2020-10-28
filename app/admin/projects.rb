@@ -14,7 +14,7 @@ ActiveAdmin.register Project do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  permit_params :weblink, :description,:image,:project_name, technology: [:name],project_technologies_attributes:[:technology_id,:id,:_destroy]
+  permit_params :weblink, :description,:image,:project_name, technology_attributes: [:name],project_technologies_attributes:[:technology_id,:id,:_destroy]
 
 
   form do |f|

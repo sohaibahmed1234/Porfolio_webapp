@@ -7,9 +7,14 @@ class LeadsController < ApplicationController
   end
   def create
     @lead = Lead.new(lead_params)
-    @lead.save
+    if @lead.save
     LeadsNotifierMailer.send_email(@lead).deliver_now
     redirect_back(fallback_location: root_path)
+    else
+      flash[:notice] = @lead.errors.messages
+
+    end
+
   end
 
   private
