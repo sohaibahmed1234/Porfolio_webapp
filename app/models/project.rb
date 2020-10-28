@@ -1,10 +1,6 @@
 class Project < ApplicationRecord
 
-  validates :description, presence: true
-  validates :weblink, presence: true
-  validates :image, presence: true
-  validates :project_name, presence: true
-
+  validates :description,:weblink, :image,:project_name,presence: true
 
   has_many :project_technologies
   has_many :technologies, through: :project_technologies

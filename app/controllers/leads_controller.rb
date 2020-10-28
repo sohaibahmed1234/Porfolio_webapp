@@ -11,7 +11,9 @@ class LeadsController < ApplicationController
     LeadsNotifierMailer.send_email(@lead).deliver_now
     redirect_back(fallback_location: root_path)
     else
-      flash[:notice] = @lead.errors.messages
+      flash[:error] = @lead.errors.full_messages
+      redirect_back(fallback_location: root_path)
+
 
     end
 

@@ -1,11 +1,7 @@
 class Job < ApplicationRecord
 
-  validates :job_title, presence: true
-  validates :job_details, presence: true
-  validates :job_type, presence: true
-  validates :positions, presence: true
-  validates :education, presence: true
-  validates :experience, presence: true
+  validates :job_title,:job_details,:job_type,:positions,:education,:experience, presence: true
+
 
 
 

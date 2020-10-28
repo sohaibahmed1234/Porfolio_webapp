@@ -175,7 +175,7 @@
                                     <div class="field form-group">
                                       <p>
                                         <%= form.label :resume %><br>
-                                        <%= form.file_field :resume ,required: true %>
+                                        <%= form.file_field :resume,required: true  %>
                                       </p>
                                     </div>
                                     <br>
@@ -187,10 +187,7 @@
                                   </div>
                                 <% end %>
 
-                              <% if flash[:notice] %>
-                                <div class="notice" style="background-color: #20c997;margin-left:10px;"><%= flash[:notice] %></div>
-                              <% end %>
-
+                              <%= flash_messages %>
                               </div> <!-- end of form-container -->
                             </div>
 

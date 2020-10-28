@@ -1,6 +1,6 @@
 class Lead < ApplicationRecord
-  validates :fullname, presence: true
+  validates :fullname,:email, presence: true
 
-  validates :email, presence: true
+
 
 end

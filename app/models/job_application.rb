@@ -1,9 +1,6 @@
 class JobApplication < ApplicationRecord
-  validates :username, presence: true
+  validates :username,:phonenumber,:email,:resume, presence: true
 
-  validates :phonenumber, presence: true
-  validates :email, presence: true
-  validates :resume, presence: true
 
 
   belongs_to :job
