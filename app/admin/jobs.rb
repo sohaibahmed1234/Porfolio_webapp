@@ -14,7 +14,7 @@ ActiveAdmin.register Job do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  permit_params :job_title, :job_details,:job_type,:technologies,:positions,:experience,:education,technologies: [:name],job_technologies_attributes:[:technology_id,:id,:_destroy]
+  permit_params :job_title, :job_details,:job_type,:technologies,:positions,:experience,:education,:is_deleted,technologies: [:name],job_technologies_attributes:[:technology_id,:id,:_destroy]
 
   form do |f|
     f.inputs "Job Details" do # physician's fields
@@ -24,6 +24,7 @@ ActiveAdmin.register Job do
     f.input :positions
     f.input :experience
     f.input :education
+    f.input :is_deleted
     end
 
     f.has_many :job_technologies do |app_f|
