@@ -1,243 +1,58 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <link rel="stylesheet" id="wp-block-library-css" href="https://www.hubextech.com/portfolio/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2" type="text/css" media="all">
-  <link rel="stylesheet" id="dashicons-css" href="https://www.hubextech.com/portfolio/wp-includes/css/dashicons.min.css?ver=5.4.2" type="text/css" media="all">
-  <link rel="stylesheet" id="everest-forms-general-css" href="https://www.hubextech.com/portfolio/wp-content/plugins/everest-forms/assets/css/everest-forms.css?ver=1.6.7" type="text/css" media="all">
-  <link rel="stylesheet" id="font-awesome-css" href="https://www.hubextech.com/portfolio/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0" type="text/css" media="all">
-  <link rel="stylesheet" id="zakra-style-css" href="https://www.hubextech.com/portfolio/wp-content/themes/zakra/style.css?ver=5.4.2" type="text/css" media="all">
-
-  <link rel="stylesheet" id="zakra-googlefonts-css" href="//fonts.googleapis.com/css?family=Muli%3A400%7CRasa%3A400&amp;ver=5.4.2" type="text/css" media="all">
-  <link rel="stylesheet" id="elementor-icons-css" href="https://www.hubextech.com/portfolio/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.7.0" type="text/css" media="all">
-  <link rel="stylesheet" id="elementor-animations-css" href="https://www.hubextech.com/portfolio/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.13" type="text/css" media="all">
-  <link rel="stylesheet" id="elementor-frontend-css" href="https://www.hubextech.com/portfolio/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.13" type="text/css" media="all">
-  <link rel="stylesheet" id="elementor-global-css" href="https://www.hubextech.com/portfolio/wp-content/uploads/elementor/css/global.css?ver=1594147339" type="text/css" media="all">
-  <link rel="stylesheet" id="elementor-post-8-css" href="https://www.hubextech.com/portfolio/wp-content/uploads/elementor/css/post-8.css?ver=1594150274" type="text/css" media="all">
-  <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Rasa%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMuli%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.4.2" type="text/css" media="all">
-  <link rel="https://api.w.org/" href="https://www.hubextech.com/portfolio/index.php?rest_route=/">
-  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hubextech.com/portfolio/xmlrpc.php?rsd">
-  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hubextech.com/portfolio/wp-includes/wlwmanifest.xml">
-  <meta name="generator" content="WordPress 5.4.2">
-  <meta name="generator" content="Everest Forms 1.6.7">
-  <link rel="canonical" href="https://www.hubextech.com/portfolio/">
-  <link rel="shortlink" href="https://www.hubextech.com/portfolio/">
-  <link rel="alternate" type="application/json+oembed" href="https://www.hubextech.com/portfolio/index.php?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=https%3A%2F%2Fwww.hubextech.com%2Fportfolio%2F">
-  <link rel="alternate" type="text/xml+oembed" href="https://www.hubextech.com/portfolio/index.php?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=https%3A%2F%2Fwww.hubextech.com%2Fportfolio%2F&amp;format=xml">
-  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> <style type="text/css">
-    .site-title,
-    .site-description {
-        position: absolute;
-        clip: rect(1px, 1px, 1px, 1px);
-    }
-
-</style>
-  <link rel="icon" href="https://www.hubextech.com/portfolio/wp-content/uploads/2020/07/cropped-hubex-icon-32-32x32.png" sizes="32x32">
-  <link rel="icon" href="https://www.hubextech.com/portfolio/wp-content/uploads/2020/07/cropped-hubex-icon-32-192x192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="https://www.hubextech.com/portfolio/wp-content/uploads/2020/07/cropped-hubex-icon-32-180x180.png">
-  <meta name="msapplication-TileImage" content="https://www.hubextech.com/portfolio/wp-content/uploads/2020/07/cropped-hubex-icon-32-270x270.png">
-  <style type="text/css" id="wp-custom-css">
-      .everest-forms .evf-minimal-portfolio .evf-field-container .evf-frontend-row input,
-      .everest-forms .evf-field-container .evf-frontend-row textarea {
-          padding: 16px 24px;
-          border-color: #CCC;
-          border-radius: 0;
-          background-color: #FFF;
-      }
-
-      .everest-forms .evf-field-container .evf-frontend-row textarea {
-          height: 150px;
-      }
-
-      .everest-forms .evf-minimal-portfolio button[type=submit] {
-          padding: 17px 40px;
-          color: #fff;
-          background-color: #20c997;
-          border: none;
-          border-radius: 0;
-          transition: 0.5s all;
-          font-weight: 800;
-      }
-
-      .everest-forms .evf-minimal-portfolio button[type=submit]:hover {
-          background-color: #1cb487;
-      }
-
-      .everest-forms .evf-minimal-portfolio .evf-submit-container {
-          display: flex;
-          justify-content: flex-end;
-      }
-
-      .everest-forms .evf-minimal-portfolio .evf-field-container .evf-frontend-row input:focus {
-          border-color: #20c997;
-      }
-
-      .widget .gallery-columns-3 .gallery-item {
-          margin: 1%;
-          max-width: 31.33%;
-      }		</style>
-  <script src="https://www.hubextech.com/portfolio/wp-includes/js/wp-emoji-release.min.js?ver=5.4.2" type="text/javascript" defer=""></script>
-</head>
-<body class="home page-template page-template-page-templates page-template-pagebuilder page-template-page-templatespagebuilder-php page page-id-8 wp-custom-logo everest-forms-js tg-site-layout--stretched tg-container--wide has-page-header has-breadcrumbs elementor-default elementor-kit-567 elementor-page elementor-page-8" data-elementor-device-mode="desktop">
-<%= render  "layouts/navbar_projects" %>
-<div id="page" class="site tg-site">
-
-
-  <main id="main" class="site-main">
-
-    <div id="content" class="site-content">
-      <div class="tg-container tg-container--flex tg-container--flex-space-between">
-        <div id="primary" class="content-area pagebuilder-content">
-          <div data-elementor-type="wp-post" data-elementor-id="8" class="elementor elementor-8" data-elementor-settings="[]">
-            <div class="elementor-inner">
-              <div class="elementor-section-wrap">
-                <section class="elementor-element elementor-element-5e93df4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5e93df4" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                  <div class="elementor-container elementor-column-gap-no">
-                    <div class="elementor-row">
-                      <div class="elementor-element elementor-element-fce72b7 elementor-column elementor-col-33 elementor-top-column" data-id="fce72b7" data-element_type="column">
-                        <div class="elementor-column-wrap  elementor-element-populated">
-                          <div class="elementor-widget-wrap">
-                            <div class="elementor-element elementor-element-bedebcd elementor-widget elementor-widget-heading" data-id="bedebcd" data-element_type="widget" data-widget_type="heading.default">
-                              <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default"><span style="color: #FFF;">We are</span> Evolo</h2> </div>
-                            </div>
-                            <div class="elementor-element elementor-element-492b8fd elementor-widget elementor-widget-text-editor" data-id="492b8fd" data-element_type="widget" data-widget_type="text-editor.default">
-                              <div class="elementor-widget-container">
-                                <div class="elementor-text-editor elementor-clearfix"><p>GET YOUR APPS AUDITED TODAY</p></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="elementor-element elementor-element-1315012 elementor-column elementor-col-33 elementor-top-column" data-id="1315012" data-element_type="column">
-                        <div class="elementor-column-wrap  elementor-element-populated">
-                          <div class="elementor-widget-wrap">
-                            <div class="elementor-element elementor-element-66fb0a0 elementor-widget elementor-widget-text-editor" data-id="66fb0a0" data-element_type="widget" data-widget_type="text-editor.default">
-                              <div class="elementor-widget-container">
-                                <div class="elementor-text-editor elementor-clearfix"><p>We aim to make innovative technology assets for your business. Our objective is to deliver long term benefits, based upon our clients’ key business requirements.</p></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="elementor-element elementor-element-ea6a0e0 elementor-column elementor-col-33 elementor-top-column" data-id="ea6a0e0" data-element_type="column">
-                        <div class="elementor-column-wrap  elementor-element-populated">
-                          <div class="elementor-widget-wrap">
-                            <div class="elementor-element elementor-element-1c8d606 elementor-widget elementor-widget-image" data-id="1c8d606" data-element_type="widget" data-widget_type="image.default">
-                              <div class="elementor-widget-container">
-                                <div class="elementor-image">
-                                  <img width="432" height="450" src="https://www.hubextech.com/portfolio/wp-content/uploads/2019/04/banner.png" class="attachment-large size-large" alt="" srcset="https://www.hubextech.com/portfolio/wp-content/uploads/2019/04/banner.png 432w, https://www.hubextech.com/portfolio/wp-content/uploads/2019/04/banner-288x300.png 288w" sizes="(max-width: 432px) 100vw, 432px"> </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+<header id="header1" class="header">
+  <div class="header-content">
+  </div>
+</header>
+<%= render "layouts/navbar_projects" %>
+<div id="services" class="cards-1">
+  <% if @jobs.nil? %>
+    <p class="p-heading p-large">Currently we have not open positions</p>
+  <% else %>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Open Positions</h2>
+          <p class="p-heading p-large">We serve small and medium sized companies in all tech related industries with
+            high quality growth services which are presented below</p>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <% @jobs.each do |job| %>
+            <!-- Card -->
+            <% if job.is_deleted == false %>
+              <a href="job_applications/new?job_id=<%= job.id %>">
+                <div class="card" style="width: 300px;height: 450px;padding:20px;margin: 30px; ">
+                  <div class="card-body">
+                    <h4 class="card-title" style="font-size: 25px"><%= job.job_title %></h4>
+                    <p><%= job.job_details %></p>
+                    <p style="font-size:17px;color: #0b0b0b;margin-bottom: 2px;">Technologies:</p>
+                    <div style="font-size:15px;text-align:center;margin-bottom:10px; ">
+                      <% job.technologies.each do |tool| %>
+                        <span class="badge badge-pill badge-dark" style="background-color: #00bfd8;"><%= tool.name %></span>
+                      <% end %>
                     </div>
+                    <p style="font-size:16px;color: #0b0b0b; margin-bottom: 10px;"> Job type: <%= job.job_type %></p>
+                    <p style="font-size:15px;color: #0b0b0b; margin-bottom: 2px;"> Positions: <%= job.positions %></p>
+                    <p style="font-size:15px;color: #0b0b0b;margin-bottom: 2px; "> Education: <%= job.education %></p>
+                    <p style="font-size:15px;color: #0b0b0b; margin-bottom: 2px;"> Experience: <%= job.experience %></p>
                   </div>
-                </section>
-                <section class="elementor-element elementor-element-2492da3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2492da3" data-element_type="section">
-                  <div class="elementor-container elementor-column-gap-default">
-                    <div class="elementor-row">
-                      <div class="elementor-element elementor-element-7a3b551 elementor-column elementor-col-100 elementor-top-column" data-id="7a3b551" data-element_type="column">
-                        <div class="elementor-column-wrap  elementor-element-populated">
-                          <div class="elementor-widget-wrap">
-                            <div class="elementor-element elementor-element-dd658ba elementor-widget elementor-widget-heading" data-id="dd658ba" data-element_type="widget" data-widget_type="heading.default">
-                              <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default">Our Recent Showcase</h2> </div>
-                            </div>
-                            <div class="elementor-element elementor-element-45b9c46 elementor-widget elementor-widget-divider" data-id="45b9c46" data-element_type="widget" data-widget_type="divider.default">
-                              <div class="elementor-widget-container">
-                                <div class="elementor-divider">
-<span class="elementor-divider-separator">
-</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+                </div>
+              </a>
+              <!-- end of card -->
+            <% end %>
+          <% end %>
+  <% end %>
+  </div> <!-- end of col -->
+  </div> <!-- end of row -->
+  </div> <!-- end of container -->
+</div> <!-- end of cards-1 -->
+<!-- end of services -->
+<footer id="colophon" class="site-footer tg-site-footer ">
+  <%= render "layouts/footer" %>
 
-                <div id="services" class="cards-1">
-                <%if @jobs.nil? %>
-                    <p class="p-heading p-large">Currently we have not open positions</p>
+</footer>
 
-
-                <%else %>
-
-
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <h2>Open Positions</h2>
-                        <p class="p-heading p-large">We serve small and medium sized companies in all tech related industries with high quality growth services which are presented below</p>
-                      </div> <!-- end of col -->
-                    </div> <!-- end of row -->
-                    <div class="row">
-                      <div class="col-lg-12">
-
-                        <% @jobs.each do |job| %>
-                          <!-- Card -->
-
-                          <% if job.is_deleted==false%>
-                          <a href="job_applications/new?job_id=<%=job.id %>">
-                            <div class="card"style="width: 300px;height: 450px;padding:20px;margin: 30px; ">
-
-                              <div class="card-body">
-                                <h4 class="card-title"style="font-size: 25px"><%=job.job_title %></h4>
-                                <p><%= job.job_details%></p>
-                                <p style="font-size:17px;color: #0b0b0b;margin-bottom: 2px;">Technologies:</p>
-
-                                <div style="font-size:15px;text-align:center;margin-bottom:10px; ">
-                                  <% job.technologies.each do |tool| %>
-                                    <span class="badge badge-pill badge-dark"style="background-color: #00bfd8;"><%=tool.name %></span>
-
-                                  <% end %>
-                                </div>
-
-
-
-                                <p style="font-size:16px;color: #0b0b0b; margin-bottom: 10px;"> Job type: <%= job.job_type%></p>
-                                <p style="font-size:15px;color: #0b0b0b; margin-bottom: 2px;"> Positions: <%= job.positions%></p>
-                                <p style="font-size:15px;color: #0b0b0b;margin-bottom: 2px; "> Education: <%= job.education%></p>
-                                <p style="font-size:15px;color: #0b0b0b; margin-bottom: 2px;"> Experience: <%= job.experience%></p>
-                              </div>
-                            </div>
-                          </a>
-                          <!-- end of card -->
-
-                        <% end%>
-
-
-                        <% end %>
-
-                        <%end %>
-                      </div> <!-- end of col -->
-                    </div> <!-- end of row -->
-                  </div> <!-- end of container -->
-                </div> <!-- end of cards-1 -->
-                <!-- end of services -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </main>
-
-  <footer id="colophon" class="site-footer tg-site-footer ">
-    <%= render "layouts/footer" %>
-
-  </footer>
-</div>
 
 
 
