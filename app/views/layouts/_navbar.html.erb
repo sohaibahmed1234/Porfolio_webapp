@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <%= link_to "Home", {controller: "pages", action: "index"}, class: "nav-link page-scroll" %>
+        <%= link_to "Home",pages_path, class: "nav-link page-scroll" %>
       </li>
       <li class="nav-item">
         <%= link_to "Services", pages_path(anchor: "services"), class: "nav-link page-scroll" %>
