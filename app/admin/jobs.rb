@@ -14,31 +14,30 @@ ActiveAdmin.register Job do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  permit_params :job_title, :job_details,:job_type,:technologies,:positions,:experience,:education,technologies: [:name],job_technologies_attributes:[:technology_id,:id,:_destroy]
+  permit_params :job_title, :job_details,:job_type,:technologies,:positions,:experience,:education,:is_deleted,technologies: [:name],job_technologies_attributes:[:technology_id,:id,:_destroy]
 
-  form do |f|
-    f.inputs "Job Details" do # physician's fields
-    f.input :job_title
-    f.input :job_details
-    f.input :job_type
-    f.input :positions
-    f.input :experience
-    f.input :education
+  form do |job|
+    job.inputs "Job Details" do
+      job.input :job_title
+      job.input :job_details
+      job.input :job_type
+      job.input :positions
+      job.input :experience
+      job.input :education
+      job.input :is_deleted
     end
 
-    f.has_many :job_technologies do |app_f|
-      app_f.inputs "Job Technology" do
-        if !app_f.object.nil?
-          # show the destroy checkbox only if it is an existing appointment
-          # else, there's already dynamic JS to add / remove new appointments
-          app_f.input :_destroy, :as => :boolean, :label => "Destroy?"
+    job.has_many :job_technologies do |job_tech|
+      job_tech.inputs "Job Technology" do
+        if !job_tech.object.nil?
+
+          job_tech.input :_destroy, :as => :boolean, :label => "Destroy?"
         end
 
-        app_f.input :technology # it should automatically generate a drop-down select to choose from your existing patients
-
+        job_tech.input :technology
       end
     end
-    f.actions
+    job.actions
   end
 
 

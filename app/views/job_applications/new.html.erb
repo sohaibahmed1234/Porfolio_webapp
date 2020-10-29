@@ -1,52 +1,90 @@
-<div class="container">
-  <div class="row">
-<div class="col-lg-6">
-<div class="container" style="margin-top: 50px">
-
-  <%= form_with scope: nil, url: job_applications_path,:html => {:multipart => true} ,local: true do |form| %>
-    <div class="field form-group">
-      <p>
-        <%= form.label :username %><br>
-        <%= form.text_field :username ,class: "form-control"%>
-      </p>
-      <div class="help-block with-errors"></div>
-    </div>
-
-    <div class="field form-group">
-    <p>
-      <%= form.label :email %><br>
-      <%= form.email_field :email,class: "form-control" %>
-    </p>
-    </div>
-    <%= hidden_field_tag 'job_id',params.permit(:job_id).values  %>
-    <div class="field form-group">
-    <p>
-      <%= form.label :phonenumber %><br>
-      <%= form.text_field :phonenumber,class: "form-control" %>
-    </p>
-
-    <br>
-      <div class="form-group">
-        <p>
-          <%= form.label :resume %><br>
-          <%= form.file_field :resume %>
-        </p>
+<!DOCTYPE html>
+<html lang="en-US">
+<header id="header1" class="header">
+  <div class="header-content">
+  </div>
+</header>
+<%= render "layouts/navbar_projects" %>
+<div id="page" class="site tg-site">
+  <div class="container" style="margin-top: 50px; width: 600px; border: #8e979e;">
+    <h4 style="margin-left: 20px;">Please fill the following form to apply on job</h4>
+    <div id="services" class="cards-1" style="text-align: left; ">
+      <div class="col-lg-12">
+        <%= form_with scope: nil, url: job_applications_path, :html => {:multipart => true}, local: true do |form| %>
+          <div class="field form-group">
+            <p>
+              <%= form.label :Name %><br>
+              <%= form.text_field :username, class: "form-control", required: true %>
+            </p>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="field form-group">
+            <p>
+              <%= form.label :email %><br>
+              <%= form.email_field :email, class: "form-control", required: true %>
+            </p>
+          </div>
+          <%= hidden_field_tag 'job_id', params.permit(:job_id).values %>
+          <div class="field form-group">
+            <p>
+              <%= form.label :phone_number %><br>
+              <%= form.text_field :phonenumber, class: "form-control", required: true %>
+            </p>
+            <br>
+            <div class="field form-group">
+              <p>
+                <%= form.label :resume %><br>
+                <%= form.file_field :resume, required: true %>
+              </p>
+            </div>
+            <br>
+            <div class="actions">
+              <%= form.submit "Apply", class: "form-control-submit-button disabled" %>
+            </div>
+          </div>
+        <% end %>
+        <%= flash_messages %>
       </div>
-        <br>
-
-
-    <div class="actions">
-      <%= form.submit "Apply", class: "form-control-submit-button disabled"%>
     </div>
-      </div>
-  <% end %>
+  </div>
+  <footer id="colophon" class="site-footer tg-site-footer ">
+    <%= render "layouts/footer" %>
 
-
-
-</div> <!-- end of form-container -->
+  </footer>
 </div>
-  </div> <!-- end of form-container -->
-</div>
-<% if flash[:notice] %>
-  <div class="notice" style="background-color: #20c997;margin-right:900px;margin-left: 100px;"><%= flash[:notice] %></div>
-<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

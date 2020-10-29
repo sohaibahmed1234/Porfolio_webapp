@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
   def index
-    @jobs=Job.all
+    @jobs=Job.is_valid
   end
 end

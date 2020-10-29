@@ -73,3 +73,10 @@ source 'https://rails-assets.org' do
 end
 
 gem 'dotenv-rails'
+
+gem 'active_admin_flat_skin'
+
+
+
+gem 'arctic_admin'
+gem "chartkick"

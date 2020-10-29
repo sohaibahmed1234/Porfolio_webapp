@@ -14,30 +14,27 @@ ActiveAdmin.register Project do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  permit_params :weblink, :description,:image,:project_name, technology: [:name],project_technologies_attributes:[:technology_id,:id,:_destroy]
+  permit_params :weblink, :description,:image,:project_name, technology_attributes: [:name],project_technologies_attributes:[:technology_id,:id,:_destroy]
 
 
-  form do |f|
-    f.inputs "Portfolio Details" do # physician's fields
-    f.input :description
-    f.input :weblink
-    f.input :project_name
-    f.input :image
+  form do |project|
+    project.inputs "Portfolio Details" do
+      project.input :description
+      project.input :weblink
+      project.input :project_name
+      project.input :image
     end
 
-    f.has_many :project_technologies do |app_f|
-      app_f.inputs "Project Technologies" do
-        if !app_f.object.nil?
-          # show the destroy checkbox only if it is an existing appointment
-          # else, there's already dynamic JS to add / remove new appointments
-          app_f.input :_destroy, :as => :boolean, :label => "Destroy?"
+    project.has_many :project_technologies do |project_tect|
+      project_tect.inputs "Project Technologies" do
+        if !project_tect.object.nil?
+          project_tect.input :_destroy, :as => :boolean, :label => "Destroy?"
         end
-
-        app_f.input :technology # it should automatically generate a drop-down select to choose from your existing patients
+        project_tect.input :technology
 
       end
     end
-    f.actions
+    project.actions
   end
 
 
