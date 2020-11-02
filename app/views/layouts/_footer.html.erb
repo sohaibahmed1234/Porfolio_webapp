@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
 <!-- Footer -->
 <div class="footer">
   <div class="container">
@@ -18,14 +20,16 @@
             </li>
             <li class="media">
               <i class="fas fa-square"></i>
-              <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
+
+
+              <div class="media-body">Read our <%= link_to "Terms & Conditions",terms_path, class: "turquoise" %>, <a class="turquoise" href="./terms.html.erb">Privacy Policy</a></div>
             </li>
           </ul>
         </div>
       </div> <!-- end of col -->
       <div class="col-md-4">
         <div class="footer-col last">
-          <h4>Find Us on</h4>
+          <h4>Social Media</h4>
           <span class="fa-stack">
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>

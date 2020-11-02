@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'project/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-
+  match '/terms' => 'pages#terms', :via => [:get, :post]
   root 'pages#index'
   resources :pages
 
