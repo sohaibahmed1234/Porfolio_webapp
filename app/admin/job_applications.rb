@@ -19,7 +19,7 @@ ActiveAdmin.register JobApplication do
   index do
     selectable_column
     id_column
-    column :job_id
+    column :job_title
     column :email
     column :username
     column :phonenumber

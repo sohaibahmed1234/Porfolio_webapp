@@ -13,6 +13,28 @@
         <%= form_with scope: nil, url: job_applications_path, :html => {:multipart => true}, local: true do |form| %>
           <div class="field form-group">
             <p>
+              <% @job_title=Job.select(:job_title).find_by(id:params.permit(:job_id).values ) %>
+              <%= form.label :Job_tile %><br>
+              <%= form.text_field :job_title, class: "form-control", required: true, value:@job_title[:job_title]   %>
+            </p>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="field form-group">
+            <p>
+              <%= form.label :Degree %><br>
+              <%= form.text_field :degree, class: "form-control", required: true  %>
+            </p>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="field form-group">
+            <p>
+              <%= form.label :Experience %><br>
+              <%= form.text_field :experience, class: "form-control", required: true  %>
+            </p>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="field form-group">
+            <p>
               <%= form.label :Name %><br>
               <%= form.text_field :username, class: "form-control", required: true %>
             </p>

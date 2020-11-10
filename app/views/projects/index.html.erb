@@ -7,7 +7,7 @@
 <div id="page" class="site tg-site">
   <h2 class="elementor-heading-title elementor-size-default" style="margin-bottom: 100px;margin-top: 20px; text-align: center;">Our
     Recent Showcase</h2></div>
-<div class="container" style="margin-left: 40px;">
+
   <% @project.each_with_index do |project, i| %>
     <h2 class="" style="margin-left:50px;text-align:left; margin-bottom: 20px;"><%= i + 1 %>
       : <%= project.project_name %></h2>
@@ -17,20 +17,20 @@
 
           <%= link_to(image_tag(project.image_url,size: "900x450", class: "img-fluid", alt: "alternative"),project.weblink)%>
         </div>
-        <div class="col-md-4" style="padding-left:50px;margin-left:50px">
+        <div class="col-md-4" style="padding-left:30px;margin-left:50px">
           <div class="card-body">
             <h5 class="card-title" style="font-size:30px;">Description</h5>
-            <p class="card-text" style="font-size:20px;font-style: unset ;color: #0b0b0b; "><%= project.description %></p>
+            <p class="p-large" style="font-size:20px;  color: #0b0b0b; "><%= project.description %></p>
           </div>
         </div>
       </div>
-    </div>
+
     <div class="elementor-element elementor-element-dd658ba elementor-widget elementor-widget-heading" data-id="dd658ba" data-element_type="widget" data-widget_type="heading.default">
       <div class="elementor-widget-container">
         <h2 class="elementor-heading-title elementor-size-default" style="margin-left:50px;text-align:left ">Technology
           Stack</h2></div>
     </div>
-    <div style="font-size:30px;margin-left:50px;text-align:left;margin-bottom: 50px ">
+    <div class="technology-btn" >
       <% project.technologies.each do |tool| %>
         <span class="badge badge-pill badge-dark" style="background-color: #00bfd8;"><%= tool.name %></span>
       <% end %>

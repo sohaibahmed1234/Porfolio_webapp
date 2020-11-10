@@ -17,6 +17,6 @@ class JobApplicationsController < ApplicationController
 end
   private
 def job_application_params
-  params.permit(:username, :phonenumber, :email,:resume,:job_id)
+  params.permit(:username, :phonenumber, :email,:resume,:job_id,:job_title,:degree,:experience)
 end
 end
