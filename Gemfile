@@ -79,3 +79,8 @@ gem 'active_admin_flat_skin'
 gem 'arctic_admin'
 gem "chartkick"
 gem 'file_validators'
+# gem for sending email in multithreading
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'redis-namespace'
+

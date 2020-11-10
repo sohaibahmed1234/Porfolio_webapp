@@ -7,7 +7,8 @@ class JobApplicationsController < ApplicationController
     @job_application = JobApplication.new(job_application_params)
     if @job_application.save
       flash[:notice] = "Job application successfully submitted"
-       JobapplicationNotifierMailer.send_email(@job_application).deliver_now
+      SendNotificationJob.perform_later(@job_application)
+
         redirect_back(fallback_location: root_path)
   else
     flash[:error] = @job_application.errors.full_messages
