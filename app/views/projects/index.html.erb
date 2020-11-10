@@ -9,7 +9,7 @@
     Recent Showcase</h2></div>
 
   <% @project.each_with_index do |project, i| %>
-    <h2 class="" style="margin-left:50px;text-align:left; margin-bottom: 20px;"><%= i + 1 %>
+    <h2 class="" style="margin-left:50px;text-align:left; margin-bottom: 20px;font-size:30px;"><%= i + 1 %>
       : <%= project.project_name %></h2>
     <div class="card" style="border:0px;width:1180px;margin-left:50px ;margin-bottom: 30px">
       <div class="row no-gutters">
@@ -24,10 +24,10 @@
           </div>
         </div>
       </div>
-
+    </div>
     <div class="elementor-element elementor-element-dd658ba elementor-widget elementor-widget-heading" data-id="dd658ba" data-element_type="widget" data-widget_type="heading.default">
       <div class="elementor-widget-container">
-        <h2 class="elementor-heading-title elementor-size-default" style="margin-left:50px;text-align:left ">Technology
+        <h2 class="elementor-heading-title elementor-size-default" style="margin-left:50px;text-align:left;font-size:30px; ">Technology
           Stack</h2></div>
     </div>
     <div class="technology-btn" >
@@ -37,7 +37,7 @@
     </div>
   <% end %>
 </div>
-</div>
+
 <footer id="colophon" class="site-footer tg-site-footer ">
   <%= render "layouts/footer" %>
 </footer>
