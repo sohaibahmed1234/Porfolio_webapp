@@ -64,18 +64,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem  'carrierwave'
-
 gem 'jquery-rails'
-
 source 'https://rails-assets.org' do
   gem 'rails-assets-chosen'
   gem 'rails-assets-chosen-bootstrap'
 end
-
 gem 'dotenv-rails'
-
 gem 'active_admin_flat_skin'
-
 gem 'arctic_admin'
 gem "chartkick"
 gem 'file_validators'
@@ -83,4 +78,13 @@ gem 'file_validators'
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'redis-namespace'
+gem "actiontext"
+gem 'active_admin_trix', '~> 0.0.3'
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-passenger', '>= 0.1.1'
+# Remove the following if your app does not use Rails
+gem 'capistrano-rails'
+# Remove the following if your server does not use RVM
+gem 'capistrano-rvm'
 

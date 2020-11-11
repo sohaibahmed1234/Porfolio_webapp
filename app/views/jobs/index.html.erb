@@ -48,9 +48,16 @@
   </div> <!-- end of container -->
 </div> <!-- end of cards-1 -->
 <!-- end of services -->
-
-<h6 style=" text-align: center;">If you did not see your dream job then please send your resume with job title in which you are interested </h6>
-<div class="align-self-center text-center"style="font-size: 25px; "><%= link_to '<button type="button" class="badge badge-pill badge-dark "style="background-color: #00bfd8;">Send</button>'.html_safe, new_job_application_path(nil) %>
+<div class="container-p">
+<p class="p-large">If you did not see your dream job then please send your resume with job title in which you are interested </p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="align-self-center text-center"style="font-size: 25px; "><%= link_to '<button type="button" class="form-control-submit-button disabled">Apply</button>'.html_safe, new_job_application_path(nil) %>
+      </div>
+    </div>
+  </div>
 </div>
 <footer id="colophon" class="site-footer tg-site-footer ">
   <%= render "layouts/footer" %>

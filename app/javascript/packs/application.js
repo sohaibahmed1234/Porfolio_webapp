@@ -11,23 +11,14 @@ require("jquery")
 require("bootstrap")
 require("chartkick")
 require("chart.js")
+import "trix"
 //= require jquery
-
 //= require chosen
-
-// require("scripts")
-
 import "./swiper.min"
 import "./validator.min"
 import "./jquery.magnific-popup"
-
 import "./scripts"
-
-
-
-
-
-
+import("@rails/actiontext")
 function chosen_init() {
     $(".chosen-select").chosen().change(
         function(){
@@ -37,10 +28,7 @@ function chosen_init() {
         }
     );
 }
-
 $(document).on('turbolinks:load', function(){chosen_init()});
-
-
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.

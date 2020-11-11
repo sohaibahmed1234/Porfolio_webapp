@@ -5,31 +5,50 @@
   </div>
 </header>
 <%= render "layouts/navbar" %>
+
+<div class="container" style="margin-top: 100px;">
+  <div class="row">
+    <div class="col-lg-2 align-self-end ml-auto">
+      <div class="align-self-center text-center" style="font-size: 25px; "><%= link_to '<button type="button" class="form-control-submit-button disabled">Back</button>'.html_safe, jobs_path %>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="page" class="site tg-site">
   <div class="container" style="margin-top: 50px; width: 600px; border: #8e979e;">
     <h4 style="margin-right: 100px;">Apply for Job </h4>
     <div id="services" class="cards-1" style="text-align: left; ">
       <div class="col-lg-12">
         <%= form_with scope: nil, url: job_applications_path, :html => {:multipart => true}, local: true do |form| %>
-          <div class="field form-group">
-            <p>
-              <% @job_title=Job.select(:job_title).find_by(id:params.permit(:job_id).values ) %>
-              <%= form.label :Job_tile %><br>
-              <%= form.text_field :job_title, class: "form-control", required: true, value:@job_title[:job_title]   %>
-            </p>
-            <div class="help-block with-errors"></div>
-          </div>
+          <% if params.permit(:job_id).empty? %>
+            <div class="field form-group">
+              <p>
+                <%= form.label :Job_tile %><br>
+                <%= form.text_field :job_title, class: "form-control", required: true %>
+              </p>
+              <div class="help-block with-errors"></div>
+            </div>
+          <% else %>
+            <div class="field form-group">
+              <p>
+                <% @job_title = Job.select(:job_title).find_by(id: params.permit(:job_id).values) %>
+                <%= form.label :Job_tile %><br>
+                <%= form.text_field :job_title, class: "form-control", required: true, value: @job_title[:job_title] %>
+              </p>
+              <div class="help-block with-errors"></div>
+            </div>
+          <% end %>
           <div class="field form-group">
             <p>
               <%= form.label :Degree %><br>
-              <%= form.text_field :degree, class: "form-control", required: true  %>
+              <%= form.text_field :degree, class: "form-control", required: true %>
             </p>
             <div class="help-block with-errors"></div>
           </div>
           <div class="field form-group">
             <p>
               <%= form.label :Experience %><br>
-              <%= form.text_field :experience, class: "form-control", required: true  %>
+              <%= form.text_field :experience, class: "form-control", required: true %>
             </p>
             <div class="help-block with-errors"></div>
           </div>
@@ -65,6 +84,7 @@
             </div>
           </div>
         <% end %>
+
         <%= flash_messages %>
       </div>
     </div>

@@ -14,14 +14,11 @@
  *= require bootstrap
  *= require styles
  *= require magnific-popup
-
-
-
- *= require_tree .
-
- *= require chosen-bootstrap
-
- *= require font-awesome
-
- */
+*= require_tree .
+*= require_self
+*= require chosen-bootstrap
+*= require font-awesome
+*/
 @import "projects";
+@import  "jobs";
+@import "./actiontext.scss";
