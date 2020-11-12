@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 server '161.35.109.169', port: 22, roles: [:web, :app, :db], primary: true
 set :application, "hubextech"
-set :repo_url, "https://github.com/hubextech/web-app.git"
+set :repo_url, "git@github.com:hubextech/web-app.git"
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
@@ -49,7 +49,7 @@ namespace :deploy do
   desc "Make sure local git is in sync with remote."
   task :check_revision do
     on roles(:app) do
-      unless `git rev-parse HEAD` == `git rev-parse origin/main`
+      unless `git rev-parse HEAD` == `git rev-parse origin2/main`
         puts "WARNING: HEAD is not the same as origin/master"
         puts "Run `git push` to sync changes."
         exit
