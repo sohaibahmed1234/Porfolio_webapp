@@ -82,6 +82,5 @@ test:
 #
 production:
   <<: *default
-  database: webpages_production
-  username: webpages
-  password: <%= ENV['WEBPAGES_DATABASE_PASSWORD'] %>
+  database: deploy
+  
