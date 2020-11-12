@@ -1,0 +1,37 @@
+// This file is automatically compiled by Webpack, along with any other files
+// present in this directory. You're encouraged to place your actual application logic in
+// a relevant structure within app/javascript and only use these pack files to reference
+// that code so it'll be compiled.
+
+require("@rails/ujs").start()
+require("turbolinks").start()
+require("@rails/activestorage").start()
+require("channels")
+require("jquery")
+require("bootstrap")
+require("chartkick")
+require("chart.js")
+import "trix"
+//= require jquery
+//= require chosen
+import "./swiper.min"
+import "./validator.min"
+import "./jquery.magnific-popup"
+import "./scripts"
+import("@rails/actiontext")
+function chosen_init() {
+    $(".chosen-select").chosen().change(
+        function(){
+            var user = $('option:selected',this);
+            var user_url = user.attr('data-url');
+            $.getScript(user_url)
+        }
+    );
+}
+$(document).on('turbolinks:load', function(){chosen_init()});
+// Uncomment to copy all static images under ../images to the output folder and reference
+// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
+// or the `imagePath` JavaScript helper below.
+//
+// const images = require.context('../images', true)
+// const imagePath = (name) => images(name, true)

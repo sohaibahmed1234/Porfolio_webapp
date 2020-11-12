@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Request submitted for contact</h1>
+<p> Name: <%=@meeting.fullname%></p>
+<p> Email: <%=@meeting.email%></p>
+<%if @meeting.phone.present? and @meeting.interest.present? %>
+<p> Phone: <%=@meeting.phone%></p>
+<p> Interest: <%=@meeting.interest%></p>
+  <%end %>
+  <%if @meeting.message.present?%>
+<p> Message: <%=@meeting.message%></p>
+  <%end %>
+</body>
+</html>

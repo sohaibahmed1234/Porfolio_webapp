@@ -1,0 +1,60 @@
+<!-- Contact -->
+<div id="contact" class="form-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Contact Information</h2>
+        <ul class="list-unstyled li-space-lg">
+          <li class="address">Don't hesitate to give us a call or send us a contact form message</li>
+          <li><i class="fas fa-map-marker-alt"></i>4 Riverina boulevard, Brookfield 3338, Melbourne, Australia.</li>
+          <li><i class="fas fa-phone"></i><a class="turquoise" href="tel:003024630820">+61 426 508 849</a></li>
+          <li><i class="fas fa-envelope"></i><a class="turquoise" href="mailto:office@evolo.com">office@hubextech.com</a></li>
+        </ul>
+      </div> <!-- end of col -->
+    </div> <!-- end of row -->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="map-responsive">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.4820377929027!2d144.54333551488418!3d-37.708361735791605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6931513964d29%3A0x3b1de25765e685cc!2s4%20Riverina%20Blvd%2C%20Brookfield%20VIC%203338%2C%20Australia!5e0!3m2!1sen!2sus!4v1603207487711!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        </div>
+      </div> <!-- end of col -->
+      <div class="col-lg-6">
+        <!-- Contact Form -->
+        <%= form_with   url: leads_path do |form| %>
+          <div class="form-group">
+            <p>
+              <%= form.label :Name %><br>
+              <%= form.text_field :fullname ,class: "form-control-input",required: true %>
+            </p>
+          </div>
+          <div class="form-group">
+            <p>
+              <%= form.label :email %><br>
+              <%= form.email_field :email,class: "form-control-input",required: true %>
+            </p>
+          </div>
+          <div class="form-group">
+            <p>
+              <%= form.label :message %><br>
+              <%= form.text_field :message ,class: "form-control-input",required: true%>
+            </p>
+          </div>
+          <div class="form-group checkbox">
+            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree with Evolo's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="actions">
+            <p>
+              <%= form.submit "Submit", class: "form-control-submit-button disabled"%>
+            </p>
+          </div>
+          <div class="form-message">
+            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+          </div>
+          <!-- end of contact form -->
+          <% end %>
+      </div> <!-- end of col -->
+    </div> <!-- end of row -->
+    <%= flash_messages %>
+  </div> <!-- end of container -->
+</div> <!-- end of form-2 -->
+<!-- end of contact -->
