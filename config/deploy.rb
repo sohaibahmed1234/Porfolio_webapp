@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.14.1"
-server '161.35.109.169', port: 22, roles: [:web, :app, :db], primary: true
+server '161.35.109.169', port: 80, roles: [:web, :app, :db], primary: true
 set :application, "hubextech"
 set :repo_url, "git@github.com:hubextech/web-app.git"
 set :user,            'deploy'
