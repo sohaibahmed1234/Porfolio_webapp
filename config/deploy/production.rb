@@ -4,12 +4,12 @@
 # You can define all roles on a single server, or split them:
 
 
-role :app, %w{deploy@_}
-role :web, %w{deploy@_}
-role :db,  %w{deploy@_}
+role :app, %w{deploy@161.35.109.169}
+role :web, %w{deploy@161.35.109.169}
+role :db,  %w{deploy@161.35.109.169}
 
 
-server "_", user: "deploy", roles: %w{app db web}, my_property: :my_value
+server "161.35.109.169", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
