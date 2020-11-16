@@ -1856,8 +1856,9 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-		background: url('header-background.jpg') center center no-repeat;
-		background-size: cover; 
+        background: url("./header-background.jpg") center center no-repeat;
+	
+		background-size: cover;
 	}
 
 	.header .header-content {
