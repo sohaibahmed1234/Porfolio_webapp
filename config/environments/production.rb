@@ -27,7 +27,7 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
 
-
+  config.force_ssl = true
   # Suppress logger output for asset requests.
 
   config.assets.compile = true
