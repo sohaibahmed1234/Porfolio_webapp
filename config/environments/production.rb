@@ -29,7 +29,7 @@ Rails.application.configure do
 
 
   # Suppress logger output for asset requests.
-  config.assets.quiet = true
+
   config.assets.compile = true
   config.serve_static_assets = true
 
