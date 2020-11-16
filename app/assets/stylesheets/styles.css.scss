@@ -1856,7 +1856,7 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-        background: url(<%= asset_path 'header-background.jpg' %>) center center no-repeat;
+        background: asset-data-url("logo.png") center ;
 
 
 		background-size: cover; 
