@@ -311,7 +311,7 @@ select {
 	-ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    background-image: url('down-arrow.png');
+    background-image: image-url("down-arrow.png");
     background-position: 96% 50%;
     background-repeat: no-repeat;
     outline: none;
@@ -1264,7 +1264,7 @@ input[type='checkbox'] {
 .slider-2 {
 	padding-top: 7.5rem;
 	padding-bottom: 7rem;
-	background: url('testimonials-background.jpg') center center no-repeat;
+	background: image-url("testimonials-background.jpg") center no-repeat;
 	background-size: cover; 
 }
 
@@ -1410,7 +1410,7 @@ input[type='checkbox'] {
 .form-2 {
 	padding-top: 7rem;
 	padding-bottom: 6.25rem;
-	background: url('contact-background.jpg') center center no-repeat;
+	background: image-url("contact-background.jpg") center  no-repeat;
 	background-size: cover; 
 }
 
