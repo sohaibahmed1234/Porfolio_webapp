@@ -1,3 +1,18 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.header_main_page_image {
+  background: image-url("header-background.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.header_main_page_image .header-content {
+  padding-top: 11.5rem;
+  text-align: left;
+}
+
+.header_main_page_image .text-container {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+/* end of header */
