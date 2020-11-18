@@ -1990,7 +1990,8 @@ a:hover.back-to-top {
 
 	/* Extra Pages */
 	.ex-header {
-		background: url('ex-header-background.jpg') center center no-repeat;
+      background: image-url("ex-header-background.jpg") center no-repeat;
+
 		background-size: cover;
 	}
 
