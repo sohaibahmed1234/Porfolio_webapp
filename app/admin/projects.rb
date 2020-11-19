@@ -19,9 +19,9 @@ ActiveAdmin.register Project do
 
   form do |project|
     project.inputs "Portfolio Details" do
-      project.input :description
-      project.input :weblink
       project.input :project_name
+      project.input :weblink
+      project.input :description
       project.input :image
     end
 
