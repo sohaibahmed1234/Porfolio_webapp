@@ -8,11 +8,7 @@
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
-/*
-
-
-*/
-
+@import 'font_awesome5_webfont';
 @import "arctic_admin/base";
 @import "actiontext.scss";
 // Overriding any non-variable Sass must be done after the fact.
